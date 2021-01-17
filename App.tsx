@@ -1,14 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import featherClient from './services/client';
+import Auth from './screens/Auth';
+import LoggedIn from './screens/LoggedIn';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  const [jwt, setJwt] = React.useState<String>('');
+
+  React.useEffect(() => {
+    featherClient
+      ?.reAuthenticate()
+      .then(() => {
+        console.log('test');
+        setJwt('ok');
+      })
+      .catch(() => {
+        setJwt('');
+      });
+  }, []);
+  if (!jwt) {
+    return <Auth jwt={setJwt}/>;
+  } else if (jwt) {
+    return <LoggedIn jwt={setJwt} />;
+  }
 }
 
 const styles = StyleSheet.create({
