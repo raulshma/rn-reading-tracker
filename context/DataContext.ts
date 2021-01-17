@@ -11,7 +11,7 @@ interface DataAction {
   type: string
 }
 
-interface Books {
+export interface Book {
   _id: string;
   rating: number;
   title: string;
@@ -49,16 +49,15 @@ const getBooks = (dispatch: any) => {
       });
   };
 };
-
 export interface DataContextModel {
   state: {
-    books: Books[],
+    books: Book[],
     error: boolean,
     total: number,
     skip: number;
     limit: number;
   },
-  getBooks: any
+  getBooks: any,
 }
 
 export const { Provider, Context }: any = createDataContext(

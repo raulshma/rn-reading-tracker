@@ -1,3 +1,5 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import React, { useContext } from 'react';
 import {
   Dimensions,
@@ -7,20 +9,18 @@ import {
   Text,
   View,
   Image,
-  Pressable,
 } from 'react-native';
 import {
   Caption,
-  Paragraph,
   Subheading,
   Surface,
-  Switch,
   TouchableRipple,
 } from 'react-native-paper';
 import {
   Context as DataContext,
   DataContextModel,
 } from '../context/DataContext';
+import BookDetails from './BookDetails';
 
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
@@ -35,7 +35,28 @@ const DESC_HEIGHT = LINE_HEIGHT * 5;
 
 const STATUSBAR_HEIGHT = Number(StatusBar.currentHeight);
 
-export default function LoggedIn({ navigation }: any) {
+const Stack = createStackNavigator();
+
+export default function LoggedInStack({ navigation }: any) {
+  return (
+    <NavigationContainer independent>
+      <Stack.Navigator initialRouteName="Listbooks">
+        <Stack.Screen
+          name="Listbooks"
+          options={{ headerShown: false }}
+          component={ListBooks}
+        />
+        <Stack.Screen
+          name="BookDetails"
+          options={{ headerTitle: 'Details' }}
+          component={BookDetails}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+function ListBooks({ navigation }: any) {
   const { state, getBooks } = useContext<DataContextModel>(DataContext);
 
   React.useEffect(() => {
@@ -52,7 +73,7 @@ export default function LoggedIn({ navigation }: any) {
             <Surface style={styles.surface}>
               <TouchableRipple
                 borderless
-                onPress={() => navigation.navigate('details', { id: item._id })}
+                onPress={() => navigation.navigate('BookDetails', { id: item._id })}
               >
                 <Image source={{ uri: item.coverUrl }} style={styles.image} />
               </TouchableRipple>

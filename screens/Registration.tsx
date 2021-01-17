@@ -43,11 +43,7 @@ const Registration = ({ navigation }: RegistractionProps) => {
         />
 
         <Button
-          style={{
-            marginTop: 10,
-            height: 55,
-            justifyContent: 'center',
-          }}
+          style={styles.button}
           labelStyle={{ fontSize: 22 }}
           mode="contained"
         >
@@ -71,7 +67,11 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: '80%',
   },
-  text: { backgroundColor: 'rgba(0,0,0,0)' },
+  button: {
+    height: 55,
+    justifyContent: 'center',
+  },
+  text: { backgroundColor: 'rgba(0,0,0,0)', marginBottom: 10 },
   errorTextStyle: {
     alignSelf: 'center',
     fontSize: 18,
