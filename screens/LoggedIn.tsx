@@ -15,6 +15,7 @@ import {
   Subheading,
   Surface,
   Switch,
+  TouchableRipple,
 } from 'react-native-paper';
 import {
   Context as DataContext,
@@ -49,15 +50,14 @@ export default function LoggedIn({ navigation }: any) {
         renderItem={({ item, index }) => {
           return (
             <Surface style={styles.surface}>
-              <Image source={{ uri: item.coverUrl }} style={styles.image} />
+              <TouchableRipple
+                borderless
+                onPress={() => navigation.navigate('details', { id: item._id })}
+              >
+                <Image source={{ uri: item.coverUrl }} style={styles.image} />
+              </TouchableRipple>
               <View style={styles.info}>
-                <Pressable
-                  onPress={() =>
-                    navigation.navigate('details', { id: item._id })
-                  }
-                >
-                  <Subheading style={styles.title}>{item.title}</Subheading>
-                </Pressable>
+                <Subheading style={styles.title}>{item.title}</Subheading>
                 <Caption style={styles.author}>By {item.author}</Caption>
                 <Caption
                   style={{ lineHeight: LINE_HEIGHT, height: DESC_HEIGHT }}

@@ -44,6 +44,7 @@ const authReducer = (state: AuthState, action: AuthAction) => {
     case 'loading':
       return {
         ...state,
+        isRefreshing: action.payload.isRefreshing,
         loading: action.payload.loading
       };
     default:
