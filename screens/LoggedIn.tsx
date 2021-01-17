@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Dimensions,
   FlatList,
@@ -16,8 +16,8 @@ import {
   Caption,
   Paragraph,
 } from 'react-native-paper';
-import { LinearGradient } from 'expo-linear-gradient';
 import featherClient from '../services/client';
+import { Context as AuthContext } from '../context/AuthContext';
 
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
@@ -25,6 +25,7 @@ const STATUSBAR_HEIGHT = Number(StatusBar.currentHeight);
 
 export default function LoggedIn({ jwt }: any) {
   const [data, setData] = React.useState<any>();
+  const { state, signout } = useContext(AuthContext);
 
   React.useEffect(() => {
     featherClient
@@ -126,8 +127,7 @@ export default function LoggedIn({ jwt }: any) {
       />
       <Button
         onPress={() => {
-          featherClient.logout();
-          jwt('');
+          signout();
         }}
       >
         Logout

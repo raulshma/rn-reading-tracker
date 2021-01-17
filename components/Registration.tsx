@@ -4,29 +4,19 @@ import { Button, TextInput } from 'react-native-paper';
 import { Loading } from './common/Loading';
 
 interface RegistractionProps {
-  authSwitch: any;
-  jwt: any;
+  navigation: any;
 }
 
-const Registration = ({ authSwitch, jwt }: RegistractionProps) => {
+const Registration = ({ navigation }: RegistractionProps) => {
   const [username, setUsername] = React.useState<string>('');
   const [email, setEmail] = React.useState<string>('');
   const [password, setPassword] = React.useState<string>('');
   const [confirmPassword, setConfirmPassword] = React.useState<string>('');
-  const [error, setError] = React.useState<string>('');
-  const [loading, setLoading] = React.useState<boolean>();
-  const fadeAnim = React.useRef(new Animated.Value(0)).current;
+  const [error, setError] = React.useState<boolean>(false);
 
-  React.useEffect(() => {
-    Animated.timing(fadeAnim, {
-      toValue: 1,
-      duration: 800,
-      useNativeDriver: true,
-    }).start();
-  }, []);
   return (
     <React.Fragment>
-      <Animated.View style={{ ...styles.form, opacity: fadeAnim }}>
+      <View style={{ ...styles.form }}>
         <TextInput
           style={styles.text}
           mode="outlined"
@@ -55,11 +45,12 @@ const Registration = ({ authSwitch, jwt }: RegistractionProps) => {
 
         <Text style={styles.errorTextStyle}>{error}</Text>
 
-        <Button mode="contained" loading={loading}>
-          Register
-        </Button>
-      </Animated.View>
-      <Button style={{ marginTop: 10 }} onPress={authSwitch}>
+        <Button mode="contained">Register</Button>
+      </View>
+      <Button
+        style={{ marginTop: 10 }}
+        onPress={() => navigation.push('Signin')}
+      >
         Already have an account? Log In!
       </Button>
     </React.Fragment>
@@ -68,7 +59,10 @@ const Registration = ({ authSwitch, jwt }: RegistractionProps) => {
 
 const styles = StyleSheet.create({
   form: {
-    width: '70%',
+    flex: 1,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    width: '80%',
   },
   text: { backgroundColor: 'white' },
   errorTextStyle: {

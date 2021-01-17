@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Animated, Dimensions, StyleSheet, Text, View } from 'react-native';
 import {
   Button,
@@ -8,50 +8,24 @@ import {
   Snackbar,
   TextInput,
 } from 'react-native-paper';
-import featherClient from '../services/client';
-
+import { Context as AuthContext } from '../context/AuthContext';
 interface LoginProps {
-  authSwitch: any;
-  jwt: any;
+  navigation: any;
 }
 
-const Login = ({ authSwitch, jwt }: LoginProps) => {
+const Login = ({ navigation }: LoginProps) => {
   const [email, setEmail] = React.useState<string>('me@raulshma.xyz');
   const [password, setPassword] = React.useState<string>('123');
-  const [loading, setLoading] = React.useState<boolean>(false);
   const [dialogVisible, setDialogVisible] = React.useState<boolean>(false);
-  const fadeAnim = React.useRef(new Animated.Value(0)).current;
 
-  React.useEffect(() => {
-    Animated.timing(fadeAnim, {
-      toValue: 1,
-      duration: 800,
-      useNativeDriver: true,
-    }).start();
-  }, []);
+  const { state, signin } = useContext(AuthContext);
+
   const login = () => {
-    setLoading(true);
-    featherClient
-      .authenticate({
-        strategy: 'local',
-        email,
-        password,
-      })
-      .then((e) => {
-        setEmail('');
-        setPassword('');
-        jwt('ok');
-      })
-      .catch((e) => {
-        setDialogVisible(true);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    signin({ email, password });
   };
   return (
     <>
-      <Animated.View style={{ ...styles.form, opacity: fadeAnim }}>
+      <View style={{ ...styles.form }}>
         <TextInput
           style={styles.text}
           mode="outlined"
@@ -74,13 +48,16 @@ const Login = ({ authSwitch, jwt }: LoginProps) => {
         <Button
           style={{ marginTop: 10 }}
           mode="contained"
-          loading={loading}
+          loading={state.loading}
           onPress={login}
         >
           Login
         </Button>
-      </Animated.View>
-      <Button style={{ marginTop: 10 }} onPress={authSwitch}>
+      </View>
+      <Button
+        style={{ marginTop: 10 }}
+        onPress={() => navigation.push('Signup')}
+      >
         Don't have an account? Register!
       </Button>
       <Portal>
@@ -103,7 +80,10 @@ const Login = ({ authSwitch, jwt }: LoginProps) => {
 
 const styles = StyleSheet.create({
   form: {
-    width: '70%',
+    flex: 1,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    width: '80%',
   },
   text: { backgroundColor: 'white' },
 });
