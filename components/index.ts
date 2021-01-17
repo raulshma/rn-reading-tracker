@@ -1,2 +1,3 @@
-export * from "./Registration"
-export * from "./Login"
+export * from "./Auth"
+export * from "./Home"
+export * from "./Splash"

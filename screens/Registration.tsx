@@ -1,7 +1,6 @@
 import React from 'react';
 import { Animated, StyleSheet, Text, View } from 'react-native';
 import { Button, TextInput } from 'react-native-paper';
-import { Loading } from './common/Loading';
 
 interface RegistractionProps {
   navigation: any;
@@ -43,9 +42,17 @@ const Registration = ({ navigation }: RegistractionProps) => {
           }
         />
 
-        <Text style={styles.errorTextStyle}>{error}</Text>
-
-        <Button mode="contained">Register</Button>
+        <Button
+          style={{
+            marginTop: 10,
+            height: 55,
+            justifyContent: 'center',
+          }}
+          labelStyle={{ fontSize: 22 }}
+          mode="contained"
+        >
+          Register
+        </Button>
       </View>
       <Button
         style={{ marginTop: 10 }}
@@ -64,7 +71,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: '80%',
   },
-  text: { backgroundColor: 'white' },
+  text: { backgroundColor: 'rgba(0,0,0,0)' },
   errorTextStyle: {
     alignSelf: 'center',
     fontSize: 18,

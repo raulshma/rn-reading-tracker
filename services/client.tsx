@@ -1,20 +1,18 @@
 import feathers from '@feathersjs/feathers';
-import socketio from '@feathersjs/socketio-client';
-import io from 'socket.io-client';
+import rest from '@feathersjs/rest-client';
 import auth from '@feathersjs/authentication-client';
+import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const socket = io('http://192.168.1.100:3030');
+const restClient = rest('http://192.168.1.100:3030');
 const app = feathers();
-
 // Setup the transport (Rest, Socket, etc.) here
-app.configure(socketio(socket));
-
+app.configure(restClient.axios(axios));
 // Available options are listed in the "Options" section
 app.configure(
   auth({
     storage: AsyncStorage,
-    storageKey: 'auth',
+    storageKey: 'auth-jwt',
   })
 );
 export default app;

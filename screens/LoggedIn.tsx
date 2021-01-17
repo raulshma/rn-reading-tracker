@@ -2,138 +2,97 @@ import React, { useContext } from 'react';
 import {
   Dimensions,
   FlatList,
-  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
   View,
   Image,
+  Pressable,
 } from 'react-native';
 import {
-  ActivityIndicator,
-  Avatar,
-  Button,
   Caption,
   Paragraph,
+  Subheading,
+  Surface,
+  Switch,
 } from 'react-native-paper';
-import featherClient from '../services/client';
-import { Context as AuthContext } from '../context/AuthContext';
+import {
+  Context as DataContext,
+  DataContextModel,
+} from '../context/DataContext';
 
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
+
+const ITEM_HEIGHT = 150;
+const ITEM_PADDING = 8;
+const ITEM_WIDTH = (width / 100) * 25;
+const ITEM2_WIDTH = (width / 100) * 75 - ITEM_PADDING * 2;
+const IMAGE_HEIGHT = ITEM_HEIGHT - ITEM_PADDING * 2;
+const LINE_HEIGHT = 14;
+const DESC_HEIGHT = LINE_HEIGHT * 5;
+
 const STATUSBAR_HEIGHT = Number(StatusBar.currentHeight);
 
-export default function LoggedIn({ jwt }: any) {
-  const [data, setData] = React.useState<any>();
-  const { state, signout } = useContext(AuthContext);
+export default function LoggedIn({ navigation }: any) {
+  const { state, getBooks } = useContext<DataContextModel>(DataContext);
 
   React.useEffect(() => {
-    featherClient
-      ?.service('books')
-      .find({
-        query: {
-          $limit: 10,
-        },
-      })
-      .then((e: any) => {
-        setData(e);
-      });
+    getBooks();
   }, []);
-  if (!data) return <Text>Loading...</Text>;
+  if (!state.books) return <Text>Loading...</Text>;
   return (
     <View style={{ top: STATUSBAR_HEIGHT }}>
       <FlatList
-        style={{
-          height: height - STATUSBAR_HEIGHT,
-        }}
-        data={data.data}
-        pagingEnabled
-        horizontal
+        data={state.books}
         keyExtractor={(item) => item._id}
-        decelerationRate={0}
-        showsHorizontalScrollIndicator={false}
         renderItem={({ item, index }) => {
           return (
-            <>
-              <View
-                removeClippedSubviews={false}
-                style={{
-                  position: 'absolute',
-                  width,
-                  height,
-                  overflow: 'hidden',
-                  zIndex: 0,
-                }}
-              >
-                <Image
-                  source={{ uri: item.coverUrl }}
-                  style={{
-                    width,
-                    height,
-                    position: 'absolute',
-                    resizeMode: 'cover',
-                  }}
-                />
-              </View>
-              <View
-                style={{
-                  width,
-                  height: height - STATUSBAR_HEIGHT,
-                  zIndex: 1,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  backgroundColor: 'rgba(0,0,0,0.5)',
-                }}
-              >
-                <View
-                  style={{
-                    width: width - 40,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: 'rgba(0, 0, 0, 0.7)',
-                    elevation: 3,
-                    padding: 5,
-                    borderRadius: 10,
-                  }}
+            <Surface style={styles.surface}>
+              <Image source={{ uri: item.coverUrl }} style={styles.image} />
+              <View style={styles.info}>
+                <Pressable
+                  onPress={() =>
+                    navigation.navigate('details', { id: item._id })
+                  }
                 >
-                  <Text
-                    style={{
-                      color: 'white',
-                      fontSize: 28,
-                      fontWeight: '800',
-                    }}
-                  >
-                    {item.title}
-                  </Text>
-                  <Caption
-                    style={{
-                      color: 'white',
-                    }}
-                  >
-                    by {item.author}
-                  </Caption>
-                  <Paragraph
-                    style={{
-                      color: 'white',
-                    }}
-                  >
-                    {item.description}
-                  </Paragraph>
-                </View>
+                  <Subheading style={styles.title}>{item.title}</Subheading>
+                </Pressable>
+                <Caption style={styles.author}>By {item.author}</Caption>
+                <Caption
+                  style={{ lineHeight: LINE_HEIGHT, height: DESC_HEIGHT }}
+                >
+                  {item.description}
+                </Caption>
               </View>
-            </>
+            </Surface>
           );
         }}
       />
-      <Button
-        onPress={() => {
-          signout();
-        }}
-      >
-        Logout
-      </Button>
     </View>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  surface: {
+    padding: ITEM_PADDING,
+    height: ITEM_HEIGHT,
+    width,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    elevation: 4,
+    flex: 1,
+    flexDirection: 'row',
+  },
+  title: {
+    marginBottom: 0,
+  },
+  author: { fontStyle: 'italic' },
+  image: {
+    height: IMAGE_HEIGHT,
+    width: ITEM_WIDTH,
+    resizeMode: 'center',
+    borderRadius: 10,
+  },
+  info: { height: IMAGE_HEIGHT, width: ITEM2_WIDTH, overflow: 'hidden' },
+});

@@ -4,6 +4,7 @@ import featherClient from '../services/client';
 interface AuthState {
   user: any,
   loading: boolean;
+  isRefreshing: boolean;
 }
 
 interface AuthAction {
@@ -17,14 +18,15 @@ interface SigninModel {
 
 
 const authReducer = (state: AuthState, action: AuthAction) => {
-  console.log(action.type)
+  console.log("AuthContext", action.type)
   switch (action.type) {
     case 'signout':
       return { ...state, user: null };
     case 'refresh':
       return {
         ...state,
-        user: action.payload.user
+        user: action.payload.user,
+        isRefreshing: action.payload.isRefreshing
       }
     case 'signin':
       return {
@@ -37,11 +39,13 @@ const authReducer = (state: AuthState, action: AuthAction) => {
         token: action.payload.token,
         email: action.payload.email,
       };
+    case 'error':
+      return { ...state, error: action.payload.error };
     case 'loading':
       return {
         ...state,
         loading: action.payload.loading
-      }
+      };
     default:
       return state;
   }
@@ -56,7 +60,11 @@ const refresh = (dispatch: any) => {
   return () => {
     const isAuthenticated = featherClient.authentication.authenticated
     if (!isAuthenticated)
-      featherClient?.reAuthenticate().then((e) => { dispatch({ ...e }) }).catch(e => console.log('failed to reauth', e));
+      featherClient?.reAuthenticate().then((e) => { dispatch({ type: 'refresh', payload: { ...e, isRefreshing: false } }) }).catch(e => console.log('failed to reauth', e)).finally(() => {
+        dispatch({ type: 'loading', payload: { isRefreshing: false } })
+      })
+    else
+      dispatch({ type: 'loading', payload: { isRefreshing: false } })
   }
 }
 
@@ -96,8 +104,8 @@ const signin = (dispatch: any) => {
 };
 
 const signout = (dispatch: any) => {
-  featherClient.logout();
   return () => {
+    featherClient.logout();
     dispatch({ type: 'signout' });
   };
 };
@@ -105,5 +113,5 @@ const signout = (dispatch: any) => {
 export const { Provider, Context }: any = createDataContext(
   authReducer,
   { signin, signout, signup, refresh },
-  { user: null, loading: false }
+  { user: null, loading: false, isRefreshing: true, error: false }
 );

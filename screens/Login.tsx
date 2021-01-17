@@ -46,7 +46,12 @@ const Login = ({ navigation }: LoginProps) => {
         />
 
         <Button
-          style={{ marginTop: 10 }}
+          style={{
+            marginTop: 10,
+            height: 55,
+            justifyContent: 'center',
+          }}
+          labelStyle={{ fontSize: 22 }}
           mode="contained"
           loading={state.loading}
           onPress={login}
@@ -85,7 +90,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: '80%',
   },
-  text: { backgroundColor: 'white' },
+  text: { backgroundColor: 'rgba(0,0,0,0)' },
 });
 
 export { Login };
