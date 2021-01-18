@@ -1,8 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
-import { blue, grey } from '../../styles';
-import { AntDesign } from '@expo/vector-icons';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/Feather';
+import { useTheme } from 'react-native-paper';
 
 type Props = {
   iconName: string;
@@ -10,6 +9,7 @@ type Props = {
 };
 
 export const BottomMenuItem = ({ iconName, isCurrent }: Props) => {
+  const { colors } = useTheme();
   return (
     <View
       style={{
@@ -20,8 +20,8 @@ export const BottomMenuItem = ({ iconName, isCurrent }: Props) => {
     >
       <Icon
         name={iconName}
-        size={32}
-        style={{ color: isCurrent ? blue : grey }}
+        size={24}
+        style={{ color: isCurrent ? colors.primary : colors.disabled }}
       />
     </View>
   );

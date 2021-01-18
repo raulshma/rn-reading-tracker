@@ -1,0 +1,761 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 2244,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "FzVjBgAAQBAJ",
+      "etag": "W8ep7NxpGWA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/FzVjBgAAQBAJ",
+      "volumeInfo": {
+        "title": "The Alchemist",
+        "authors": ["Paulo Coelho"],
+        "publisher": "HarperCollins",
+        "publishedDate": "2015-02-24",
+        "description": "A special 25th anniversary edition of the extraordinary international bestseller, including a new Foreword by Paulo Coelho. Combining magic, mysticism, wisdom and wonder into an inspiring tale of self-discovery, The Alchemist has become a modern classic, selling millions of copies around the world and transforming the lives of countless readers across generations. Paulo Coelho's masterpiece tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined. Santiago's journey teaches us about the essential wisdom of listening to our hearts, of recognizing opportunity and learning to read the omens strewn along life's path, and, most importantly, to follow our dreams.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780062416216"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0062416219"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 208,
+        "printType": "BOOK",
+        "categories": ["Fiction"],
+        "averageRating": 4.5,
+        "ratingsCount": 18,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.6.5.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=FzVjBgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=FzVjBgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=FzVjBgAAQBAJ&printsec=frontcover&dq=the+alchemist+authorin:+Paulo+Coelho&hl=&cd=1&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=FzVjBgAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=FzVjBgAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 271.28,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 75,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=FzVjBgAAQBAJ&rdid=book-FzVjBgAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 271280000,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 75000000,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/The_Alchemist-sample-epub.acsm?id=FzVjBgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/The_Alchemist-sample-pdf.acsm?id=FzVjBgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=FzVjBgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This story, dazzling in its powerful simplicity and inspiring wisdom, is about an Andalusian shepherd boy named Santiago who travels from his homeland in Spain to the Egyptian desert in search of a treasure buried in the Pyramids."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "BsyKDwAAQBAJ",
+      "etag": "uYdj7c/s+Qw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/BsyKDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Summary of The Alchemist by Paulo Coelho",
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "full-1.0.0",
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=BsyKDwAAQBAJ&printsec=frontcover&dq=the+alchemist+authorin:+Paulo+Coelho&hl=&cd=2&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=BsyKDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=BsyKDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FREE",
+        "isEbook": true,
+        "buyLink": "https://play.google.com/store/books/details?id=BsyKDwAAQBAJ&rdid=book-BsyKDwAAQBAJ&rdot=1&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=BsyKDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "The Alchemist: A Fable About Following Your Dream by Paulo Coelho | Book Summary | Abbey Beathan (Disclaimer: This is NOT the original book.) A story about the transforming power of our dreams and the goodness of listening to our hearts."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "BDHtDwAAQBAJ",
+      "etag": "uaofdM8Us0U",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/BDHtDwAAQBAJ",
+      "volumeInfo": {
+        "title": "The Secret of The Alchemist",
+        "subtitle": "Uncovering The Secret in Paulo Coelho's Bestselling Novel 'The Alchemist'",
+        "authors": ["Colm Holland"],
+        "publisher": "John Hunt Publishing",
+        "publishedDate": "2020-07-31",
+        "description": "In The Secret of The Alchemist, Colm Holland reveals how you can discover the power to miraculously change the world around you beyond all recognition and for the better. Colm will tell you the story of his encounter with Paulo Coelho and his bestselling book The Alchemist and how discovering the secret in Paulo’s novel gave him the insights to achieve true empowerment in his life. Alchemy is all about transformation and draws upon the greatest power of all to convert seemingly insurmountable obstacles into life changing experiences. Through an honest account of his own, often difficult quest to live life to the full, Colm offers you the chance to draw on his discoveries and other real-life stories to inspire the pursuit of your dreams and reach your goals. How does he know? As he wrote this book, Colm asked Love to give you, the reader, everything you need to become the alchemist in your world.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781789044355"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1789044359"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 192,
+        "printType": "BOOK",
+        "categories": ["Body, Mind & Spirit"],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.2.2.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=BDHtDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=BDHtDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=BDHtDwAAQBAJ&printsec=frontcover&dq=the+alchemist+authorin:+Paulo+Coelho&hl=&cd=3&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=BDHtDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=BDHtDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 775.82,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 387.91,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=BDHtDwAAQBAJ&rdid=book-BDHtDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 775820000,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 387910000,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/The_Secret_of_The_Alchemist-sample-epub.acsm?id=BDHtDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=BDHtDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "How does he know? As he wrote this book, Colm asked Love to give you, the reader, everything you need to become the alchemist in your world."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "8RBVDwAAQBAJ",
+      "etag": "YJgZ9Htbl7Q",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/8RBVDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Hippie",
+        "authors": ["Paulo Coelho"],
+        "publisher": "Random House",
+        "publishedDate": "2018-09-25",
+        "description": "To learn about yourself, explore the world around you. Drawing on the rich experience of his own life, bestselling author Paulo Coelho takes us back in time to relive the dreams of a generation that longed for peace and dared to challenge the established social order. In HIPPIE, he tells the story of Paulo, a skinny Brazilian with a goatee and long hair, setting off on a journey in search of a deeper meaning for his life. He travels on the famous ‘Death Train to Bolivia’, then on to Peru, later hitchhiking through Chile and Argentina. In the famous Dam Square in Amsterdam he finds young people playing music, while discussing sexual liberation, the expansion of consciousness and the search for an inner truth. There he meets Karla, a Dutch woman in her twenties who has been waiting to find the ideal companion to accompany her on the fabled hippie trail to Nepal. Together with their fellow travellers, they embark on a trip aboard the Magic Bus, heading across Europe and Central Asia to Kathmandu. For everyone, the journey is transformative. For Paulo and Karla it is a life-defining love story that leads to choices that will set the course of the rest of their lives.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781473562677"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1473562678"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 304,
+        "printType": "BOOK",
+        "categories": ["Fiction"],
+        "averageRating": 4.5,
+        "ratingsCount": 2,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.2.2.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=8RBVDwAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=8RBVDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=8RBVDwAAQBAJ&dq=the+alchemist+authorin:+Paulo+Coelho&hl=&cd=4&source=gbs_api",
+        "infoLink": "http://books.google.co.in/books?id=8RBVDwAAQBAJ&dq=the+alchemist+authorin:+Paulo+Coelho&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Hippie.html?hl=&id=8RBVDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=8RBVDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Together they decide to take the fabled hippie trail across Europe to Nepal, aboard the Magic Bus, in search of self-discovery. So begins a life-defining love story that will set the course for the rest of their lives."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "7RXVDQAAQBAJ",
+      "etag": "PBgSjrJXOWE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/7RXVDQAAQBAJ",
+      "volumeInfo": {
+        "title": "The Spy",
+        "authors": ["Paulo Coelho"],
+        "publisher": "Random House India",
+        "publishedDate": "2018-03-01",
+        "description": "When Mata Hari arrived in Paris she was penniless. Within months she was the most celebrated woman in the city. As a dancer, she shocked and delighted audiences; as a courtesan, she bewitched the era's richest and most powerful men. But as paranoia consumed a country at war, Mata Hari's lifestyle brought her under suspicion. In 1917, she was arrested in her hotel room on the Champs Elysees, and accused of espionage. Told in Mata Hari's voice through her final letter, The Spy is the unforgettable story of a woman who dared to defy convention and paid the ultimate price.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9789385990410"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "9385990411"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 208,
+        "printType": "BOOK",
+        "categories": ["Fiction"],
+        "averageRating": 3.5,
+        "ratingsCount": 11,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.3.4.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=7RXVDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=7RXVDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=7RXVDQAAQBAJ&printsec=frontcover&dq=the+alchemist+authorin:+Paulo+Coelho&hl=&cd=5&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=7RXVDQAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=7RXVDQAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 178.91,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 96.61,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=7RXVDQAAQBAJ&rdid=book-7RXVDQAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 178910000,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 96610000,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/The_Spy-sample-epub.acsm?id=7RXVDQAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/The_Spy-sample-pdf.acsm?id=7RXVDQAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=7RXVDQAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Told in Mata Hari&#39;s voice through her final letter, The Spy is the unforgettable story of a woman who dared to defy convention and paid the ultimate price."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "X8t-U1BOC7UC",
+      "etag": "xofi0n85t3g",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/X8t-U1BOC7UC",
+      "volumeInfo": {
+        "title": "Eleven Minutes",
+        "subtitle": "A Novel",
+        "authors": ["Paulo Coelho"],
+        "publisher": "Harper Collins",
+        "publishedDate": "2009-10-13",
+        "description": "Eleven Minutes is the story of Maria, a young girl from a Brazilian village, whose first innocent brushes with love leave her heartbroken. At a tender age, she becomes convinced that she will never find true love, instead believing that \"love is a terrible thing that will make you suffer. . . .\" A chance meeting in Rio takes her to Geneva, where she dreams of finding fame and fortune. Maria's despairing view of love is put to the test when she meets a handsome young painter. In this odyssey of self-discovery, Maria has to choose between pursuing a path of darkness -- sexual pleasure for its own sake -- or risking everything to find her own \"inner light\" and the possibility of sacred sex, sex in the context of love. This P.S. edition features an extra 16 pages of insights into the book, including author interviews, recommended reading, and more.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780061835575"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0061835579"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 320,
+        "printType": "BOOK",
+        "categories": ["Fiction"],
+        "averageRating": 3.5,
+        "ratingsCount": 33,
+        "maturityRating": "MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "3.4.5.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=X8t-U1BOC7UC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=X8t-U1BOC7UC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=X8t-U1BOC7UC&printsec=frontcover&dq=the+alchemist+authorin:+Paulo+Coelho&hl=&cd=6&source=gbs_api",
+        "infoLink": "http://books.google.co.in/books?id=X8t-U1BOC7UC&dq=the+alchemist+authorin:+Paulo+Coelho&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Eleven_Minutes.html?hl=&id=X8t-U1BOC7UC"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/Eleven_Minutes-sample-epub.acsm?id=X8t-U1BOC7UC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=X8t-U1BOC7UC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Eleven Minutes is the story of Maria, a young girl from a Brazilian village, whose first innocent brushes with love leave her heartbroken."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "pb7zWWwEWAQC",
+      "etag": "4FsA1jxbvVY",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/pb7zWWwEWAQC",
+      "volumeInfo": {
+        "title": "The Winner Stands Alone",
+        "subtitle": "A Novel",
+        "authors": ["Paulo Coelho"],
+        "publisher": "Harper Collins",
+        "publishedDate": "2009-04-07",
+        "description": "“[Coelho’s] special talent seems to be his ability to speak to everyone at once. The kind of spirituality he espouses is to all comers. . . . His readers often say that they see their own lives in his own books.” —New Yorker From the bestselling author of The Alchemist, Paulo Coelho, comes an absorbing new novel that holds a mirror up to our culture’s obsession with fame, glamour, and celebrity.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780061872563"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0061872563"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 384,
+        "printType": "BOOK",
+        "categories": ["Fiction"],
+        "averageRating": 3,
+        "ratingsCount": 18,
+        "maturityRating": "MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=pb7zWWwEWAQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=pb7zWWwEWAQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=pb7zWWwEWAQC&printsec=frontcover&dq=the+alchemist+authorin:+Paulo+Coelho&hl=&cd=7&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=pb7zWWwEWAQC&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=pb7zWWwEWAQC"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 677.1,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 338.55,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=pb7zWWwEWAQC&rdid=book-pb7zWWwEWAQC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 677100000,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 338550000,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/The_Winner_Stands_Alone-sample-epub.acsm?id=pb7zWWwEWAQC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=pb7zWWwEWAQC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Adroitly interweaving the characters&#39; stories, Paulo Coelho uses his twelfth novel to paint an engrossing picture of a world overrun by glamour and excess, and shows us the possibly dire consequences of our obsession with fame."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "_QIvDwAAQBAJ",
+      "etag": "KAkwztehX18",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/_QIvDwAAQBAJ",
+      "volumeInfo": {
+        "title": "The Life and Creative Works of Paulo Coelho",
+        "subtitle": "A Psychobiography from a Positive Psychology Perspective",
+        "authors": ["Claude-Helene Mayer"],
+        "publisher": "Springer",
+        "publishedDate": "2017-07-31",
+        "description": "This book assesses the life and success of the writer Paulo Coelho, one of the most fascinating and contemporary writers in the world, through new lenses. It applies a positive psychology perspective and contributes to using innovative theories in psychobiographical studies. This study explores the development of holistic wellness (HWM) and faith development (FDT) throughout the writer's life. It presents radical changes in spirituality, self-direction, love and faith across the life span. Further, it analyses the development of Coelho’s relationship with God and the creation of meaningfulness through his belief and writing. This study contributes to a new era of psychobiographical works within the positive psychology framework.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9783319596389"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "3319596381"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 501,
+        "printType": "BOOK",
+        "categories": ["Psychology"],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.2.2.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=_QIvDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=_QIvDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=_QIvDwAAQBAJ&printsec=frontcover&dq=the+alchemist+authorin:+Paulo+Coelho&hl=&cd=8&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=_QIvDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=_QIvDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 11764.6,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 11764.6,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=_QIvDwAAQBAJ&rdid=book-_QIvDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 11764600000,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 11764600000,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/The_Life_and_Creative_Works_of_Paulo_Coe-sample-epub.acsm?id=_QIvDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/The_Life_and_Creative_Works_of_Paulo_Coe-sample-pdf.acsm?id=_QIvDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=_QIvDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This book assesses the life and success of the writer Paulo Coelho, one of the most fascinating and contemporary writers in the world, through new lenses."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "sz0WfSng27MC",
+      "etag": "1zH9ySbiqOA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/sz0WfSng27MC",
+      "volumeInfo": {
+        "title": "The Witch of Portobello",
+        "authors": ["Paulo Coelho"],
+        "publisher": "HarperCollins UK",
+        "publishedDate": "2011-04-28",
+        "description": "From one of the world's best loved storytellers, Paulo Coelho, comes a riveting novel tracing the mysterious life and disappearance of Athena dubbed ‘the Witch of Portobello’.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780007379934"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0007379935"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 368,
+        "printType": "BOOK",
+        "categories": ["Fiction"],
+        "averageRating": 3,
+        "ratingsCount": 33,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "2.2.3.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=sz0WfSng27MC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=sz0WfSng27MC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.co.in/books?id=sz0WfSng27MC&printsec=frontcover&dq=the+alchemist+authorin:+Paulo+Coelho&hl=&cd=9&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=sz0WfSng27MC&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=sz0WfSng27MC"
+      },
+      "saleInfo": {
+        "country": "IN",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 233.26,
+          "currencyCode": "INR"
+        },
+        "retailPrice": {
+          "amount": 187.37,
+          "currencyCode": "INR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=sz0WfSng27MC&rdid=book-sz0WfSng27MC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 233260000,
+              "currencyCode": "INR"
+            },
+            "retailPrice": {
+              "amountInMicros": 187370000,
+              "currencyCode": "INR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "IN",
+        "viewability": "PARTIAL",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.co.in/books/download/The_Witch_of_Portobello-sample-epub.acsm?id=sz0WfSng27MC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=sz0WfSng27MC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "From one of the world&#39;s best loved storytellers, Paulo Coelho, comes a riveting novel tracing the mysterious life and disappearance of Athena dubbed ‘the Witch of Portobello’."
+      }
+    }
+  ]
+}

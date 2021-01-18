@@ -8,13 +8,14 @@ import {
 } from 'react-native';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { BottomMenuItem } from './BottomMenuItem';
-import { blue } from '../../styles';
+import { useTheme } from 'react-native-paper';
 
 export const TabBar = ({
   state,
   descriptors,
   navigation,
 }: BottomTabBarProps) => {
+  const { colors } = useTheme();
   const [translateValue] = useState(new Animated.Value(0));
   const totalWidth = Dimensions.get('window').width;
   // const routesFiltered = state.routes.filter((e) => e.name != 'details');
@@ -43,6 +44,7 @@ export const TabBar = ({
             {
               transform: [{ translateX: translateValue }],
               width: tabWidth - 20,
+              backgroundColor: colors.primary,
             },
           ]}
         />
@@ -122,7 +124,7 @@ const style = StyleSheet.create({
     position: 'absolute',
     top: 0,
     left: 10,
-    backgroundColor: blue,
+    // backgroundColor: blue,
     borderRadius: 10,
   },
 });

@@ -48,6 +48,7 @@ const Login = ({ navigation }: LoginProps) => {
         <Button
           style={styles.button}
           labelStyle={{ fontSize: 22 }}
+          contentStyle={styles.buttonContent}
           mode="contained"
           loading={state.loading}
           onPress={login}
@@ -89,6 +90,10 @@ const styles = StyleSheet.create({
   button: {
     height: 55,
     justifyContent: 'center',
+    borderRadius: 6,
+  },
+  buttonContent: {
+    height: '100%',
   },
   text: { backgroundColor: 'rgba(0,0,0,0)', marginBottom: 10 },
 });

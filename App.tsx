@@ -4,8 +4,17 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Provider as AuthProvider } from './context/AuthContext';
 import { Provider as DataProvider } from './context/DataContext';
 import { Context as AuthContext } from './context/AuthContext';
-import { Provider } from 'react-native-paper';
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { splashFlow, authFlow, homeFlow } from './components';
+
+const theme = {
+  ...DefaultTheme,
+  roundness: 2,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: '#6369d1',
+  },
+};
 
 const Stack = createStackNavigator();
 function App() {
@@ -48,9 +57,9 @@ export default () => {
   return (
     <AuthProvider>
       <DataProvider>
-        <Provider>
+        <PaperProvider theme={theme}>
           <App />
-        </Provider>
+        </PaperProvider>
       </DataProvider>
     </AuthProvider>
   );

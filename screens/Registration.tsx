@@ -70,8 +70,12 @@ const styles = StyleSheet.create({
   button: {
     height: 55,
     justifyContent: 'center',
+    borderRadius: 6,
   },
-  text: { backgroundColor: 'rgba(0,0,0,0)', marginBottom: 10 },
+  text: {
+    backgroundColor: 'rgba(0,0,0,0)',
+    marginBottom: 10,
+  },
   errorTextStyle: {
     alignSelf: 'center',
     fontSize: 18,
