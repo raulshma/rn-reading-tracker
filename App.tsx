@@ -1,18 +1,19 @@
 import React from 'react';
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Provider as AuthProvider } from './context/AuthContext';
-import { Provider as DataProvider } from './context/DataContext';
-import { Context as AuthContext } from './context/AuthContext';
-import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
-import { splashFlow, authFlow, homeFlow } from './components';
+
+import { Provider as AuthProvider } from './app/context/AuthContext';
+import { Provider as DataProvider } from './app/context/DataContext';
+import { Context as AuthContext } from './app/context/AuthContext';
+import { splashFlow, authFlow, homeFlow } from './app/components';
 
 const theme = {
   ...DefaultTheme,
   roundness: 2,
   colors: {
     ...DefaultTheme.colors,
-    primary: '#6369d1',
+    primary: '#3454d1',
   },
 };
 

@@ -23,19 +23,19 @@ function Logout() {
 
 const styles = StyleSheet.create({
   container: {
-    width: '50%',
+    width: 140,
   },
   button: {
-    height: 60,
+    height: 40,
     justifyContent: 'center',
-    borderRadius: 10,
+    borderRadius: 5,
     elevation: 6,
   },
   buttonContent: {
     height: '100%',
   },
   buttonLabel: {
-    fontSize: 18,
+    fontSize: 16,
   },
 });
 

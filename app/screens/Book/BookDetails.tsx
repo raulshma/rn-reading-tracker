@@ -6,9 +6,9 @@ import {
   Book,
   Context as DataContext,
   DataContextModel,
-} from '../context/DataContext';
+} from '../../context/DataContext';
 
-export default function BookDetails({ navigation, route }: any) {
+function BookDetails({ navigation, route }: any) {
   const { state } = useContext<DataContextModel>(DataContext);
   const [book, setBook] = useState<Book>();
 
@@ -42,3 +42,5 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
 });
+
+export { BookDetails };
