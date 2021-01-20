@@ -1,13 +1,22 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { ActivityIndicator, Colors, useTheme } from 'react-native-paper';
 
-function splashFlow() {
+const style = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 10000,
+    ...StyleSheet.absoluteFillObject,
+  },
+});
+const SplashFlow = React.memo(() => {
   const { colors } = useTheme();
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={style.container}>
       <ActivityIndicator animating={true} size="large" color={colors.primary} />
     </View>
   );
-}
-export { splashFlow };
+});
+export { SplashFlow };

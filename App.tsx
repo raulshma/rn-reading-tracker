@@ -3,10 +3,10 @@ import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Provider as AuthProvider } from './app/context/AuthContext';
 import { Provider as DataProvider } from './app/context/DataContext';
+import { Provider as AuthProvider } from './app/context/AuthContext';
 import { Context as AuthContext } from './app/context/AuthContext';
-import { splashFlow, authFlow, homeFlow } from './app/components';
+import { SplashFlow, authFlow, homeFlow } from './app/components';
 
 const theme = {
   ...DefaultTheme,
@@ -31,7 +31,7 @@ function App() {
             <Stack.Screen
               options={{ headerShown: false }}
               name="Splash"
-              component={splashFlow}
+              component={SplashFlow}
             />
           </>
         ) : state.user === null ? (

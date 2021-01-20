@@ -6,10 +6,11 @@ import {
   View,
   Image,
   Dimensions,
+  Animated,
 } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { Searchbar, Surface } from 'react-native-paper';
-import { splashFlow } from '../../components/Splash';
+import { SplashFlow } from '../../components/Splash';
 import {
   DataContextModel,
   Context as DataContext,
@@ -39,19 +40,17 @@ const MySearchBar = (props: any) => {
 
 const AddBook = () => {
   const { state, searchQuery } = useContext<DataContextModel>(DataContext);
-
-  if (!state.searchData)
-    return (
-      <View style={styles.searchContainer}>
-        <MySearchBar search={searchQuery} />
-        {state.loading && splashFlow()}
-      </View>
-    );
+  const scrollY = React.useRef(new Animated.Value(0)).current;
   return (
     <View style={styles.searchContainer}>
-      <FlatList
-        data={state.searchData.items}
-        ListHeaderComponent={<MySearchBar search={searchQuery} />}
+      <MySearchBar search={searchQuery} />
+      {state.loading && <SplashFlow />}
+      <Animated.FlatList
+        onScroll={Animated.event(
+          [{ nativeEvent: { contentOffset: { y: scrollY } } }],
+          { useNativeDriver: true }
+        )}
+        data={state?.searchData?.items}
         keyExtractor={(item: any) => item.id}
         renderItem={({
           item,
@@ -66,8 +65,19 @@ const AddBook = () => {
           if (rating && ratingCount) {
             ratingText = `${rating}/5 (${ratingCount})`;
           }
+          const inputRange = [-1, 0, 120 * index, 120 * (index + 2)];
+
+          const scale = scrollY.interpolate({
+            inputRange,
+            outputRange: [1, 1, 1, 0.7],
+          });
           return (
-            <Surface style={styles.itemContainer}>
+            <Animated.View
+              style={{
+                ...styles.itemContainer,
+                transform: [{ scale }],
+              }}
+            >
               <Grid>
                 <Row>
                   <Col size={75}>
@@ -108,7 +118,7 @@ const AddBook = () => {
                   </Col>
                 </Row>
               </Grid>
-            </Surface>
+            </Animated.View>
           );
         }}
       />
@@ -132,9 +142,10 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginRight: 10,
     borderRadius: 10,
-    elevation: 2,
+    elevation: 3,
     flex: 0,
     flexDirection: 'row',
+    backgroundColor: 'white',
   },
   image: {
     width: '85%',
