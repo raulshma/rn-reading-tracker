@@ -4,7 +4,7 @@ import auth from '@feathersjs/authentication-client';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const restClient = rest('http://192.168.1.100:3030');
+const restClient = rest(process.env.NODE_ENV==='development'?'http://192.168.1.100:3030':'https://reading-tracker-api.herokuapp.com');
 const app = feathers();
 // Setup the transport (Rest, Socket, etc.) here
 app.configure(restClient.axios(axios));

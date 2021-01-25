@@ -13,7 +13,8 @@ interface AuthAction {
 }
 interface SigninModel {
   email: string,
-  password: string
+  password: string,
+  navigation: any;
 }
 
 
@@ -34,13 +35,8 @@ const authReducer = (state: AuthState, action: AuthAction) => {
         user: action.payload.user,
         loading: action.payload.loading
       };
-    case 'signup':
-      return {
-        token: action.payload.token,
-        email: action.payload.email,
-      };
     case 'error':
-      return { ...state, error: action.payload.error };
+      return { ...state, registerError: action.payload.error };
     case 'loading':
       return {
         ...state,
@@ -50,11 +46,6 @@ const authReducer = (state: AuthState, action: AuthAction) => {
     default:
       return state;
   }
-};
-
-const signup = (dispatch: any) => {
-  return ({ email, password }: SigninModel) => {
-  };
 };
 
 const refresh = (dispatch: any) => {
@@ -93,6 +84,7 @@ const signin = (dispatch: any) => {
         });
       })
       .catch((e) => {
+        console.log(e)
         dispatch({
           type: 'loading',
           payload: {
@@ -113,6 +105,6 @@ const signout = (dispatch: any) => {
 
 export const { Provider, Context }: any = createDataContext(
   authReducer,
-  { signin, signout, signup, refresh },
-  { user: null, loading: false, isRefreshing: true, error: false }
+  { signin, signout, refresh },
+  { user: null, loading: false, isRefreshing: true, error: false, }
 );

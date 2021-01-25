@@ -18,12 +18,15 @@ import {
   Subheading,
   Surface,
   TouchableRipple,
+  useTheme,
 } from 'react-native-paper';
+import { SplashFlow } from '../../components/Splash';
 import {
   Context as DataContext,
   DataContextModel,
 } from '../../context/DataContext';
 
+const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
 
 const ITEM_HEIGHT = 150;
@@ -39,6 +42,7 @@ function ListBook({ navigation }: any) {
   const { state, getBooks, deleteBook } = useContext<DataContextModel>(
     DataContext
   );
+  const { colors } = useTheme();
   const [visible, setVisible] = React.useState(false);
   const [id, setId] = React.useState('');
 
@@ -55,10 +59,15 @@ function ListBook({ navigation }: any) {
 
   if (!state.books) return <Text>Loading...</Text>;
   return (
-    <View style={{ top: STATUSBAR_HEIGHT }}>
+    <View
+      style={{ top: STATUSBAR_HEIGHT, height: height - STATUSBAR_HEIGHT - 30 }}
+    >
       <FlatList
+        style={{ borderTopColor: colors.primary, borderTopWidth: 5 }}
+        refreshing={state.fetchingBooks}
+        onRefresh={getBooks}
         data={state.books}
-        keyExtractor={(item) => item._id}
+        keyExtractor={(item, index) => index.toString()}
         renderItem={({ item, index }) => {
           return (
             <TouchableRipple

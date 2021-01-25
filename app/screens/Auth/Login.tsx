@@ -8,7 +8,7 @@ import {
   Snackbar,
   TextInput,
 } from 'react-native-paper';
-import { Context as AuthContext } from '../context/AuthContext';
+import { Context as AuthContext } from '../../context/AuthContext';
 interface LoginProps {
   navigation: any;
 }
